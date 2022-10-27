@@ -20,7 +20,7 @@ public class LinearEquationRunner {
         String Y2 = cord2.substring(Comma + 1, cord1.length()-1);
         int c4 = Integer.parseInt(Y2);
         LinearEquation Cords = new LinearEquation (c1,c2,c3,c4);
-        System.out.print
+        Cords.LineInfo();
 
 
 
