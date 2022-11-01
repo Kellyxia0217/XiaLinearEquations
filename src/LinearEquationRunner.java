@@ -16,13 +16,16 @@ public class LinearEquationRunner {
         String Y1 = cord1.substring(Comma + 1, cord1.length()-1);
         int c2 = Integer.parseInt(Y1);
         String X2 = cord2.substring(1,Comma-1);
-        System.out.print(X2);
         int c3 = Integer.parseInt(X2);
         String Y2 = cord2.substring(Comma + 1, cord2.length()-1);
         int c4 = Integer.parseInt(Y2);
         LinearEquation Cords = new LinearEquation (c1,c2,c3,c4);
         Cords.LineInfo();
-
+        System.out.print("Enter a value for x: ");
+        double newval = (input.nextInt());
+        double newnum = Cords.Newpoint(newval);
+        System.out.println("The point on the Line is: " + "(" + newval + "," + newnum + ")");
+        
 
 
 
