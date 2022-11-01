@@ -15,10 +15,10 @@ public class LinearEquation {
     }
 
     public double getDistance() {
-       return Math.sqrt((x2-x1)+(y2-y1));
+       return Math.sqrt(Math.pow(x2-x1,2)+Math.pow(y2-y1,2));
     }
     public double getSlope()  {
-       return((y2-y1)/(x2-x1));
+       return ((double)(y2-y1)/(x2-x1));
 
 
 
@@ -33,16 +33,17 @@ public class LinearEquation {
 
 
     public String EquationOfLine() {
-       return "y= " + getSlope() + "x " + getyintercept();
+       return "y= " + ("" + (y2-y1) + "/" + (x2-x1) + "x") + "+" + getyintercept();
 
     }
 
 
     public void LineInfo() {
-       System.out.println("The two points are:  " + "(" + x1 + "," + y1 + ") " + "and" +  "(" + x1 + "," + y1 + ") ");
+       System.out.println("The two points are:  " + "(" + x1 + "," + y1 + ") " + "and" +  "(" + x2 + "," + y2 + ") ");
        System.out.println("The equation of the line between these points is: " + EquationOfLine());
        System.out.println("The slope of this line is: " + getSlope());
        System.out.println("The y-intercept of the line is: " + getyintercept());
+       System.out.println("The distance of the line is: " + getDistance());
 
 
     }
